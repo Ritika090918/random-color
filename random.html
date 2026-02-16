@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="color">YOUR LUCKY COLOR FOR YOUR INTERVIEW</h1>
+    <button onclick="generate()">Click here to get your lucky color</button>
+    <button onclick="reset()">reset</button>
+    <script>
+        let count=0;
+         let arr=[
+  "red",
+  "blue",
+  "green",
+  "yellow",
+  "orange",
+  "purple",
+  "pink",
+  "black",
+  "white",
+  "gray",
+  "brown",
+  "cyan",
+  "magenta",
+  "lime",
+  "navy",
+  "teal",
+  "maroon",
+  "olive",
+  "gold",
+  "silver"
+];
+        function generate(){
+            count=Math.floor(Math.random()*20);
+            document.getElementById("color").innerText=arr[count];
+            if(count==12){
+                document.getElementById("color").innerText="you are not able to get interview sorry😕";
+            }
+        }
+        function reset(){
+                  count=0;
+                   document.getElementById("color").innerText="start";
+        }
+    </script>
+</body>
+</html>
